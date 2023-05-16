@@ -29,13 +29,13 @@ def RandomStudy():
 
     choose = []
     # Se o número de escolhas informado for maior que o número de matérias.
-    if(amount > len(vetor)):
+    if(amount >= len(vetor)):
         for c in vetor:
             choose.append(c)
     # Se não for, sorteia normal.
     else:
         for c in range(0, amount):
-            choose.append(vetor[randint(0, len(vetor))])
+            choose.append(vetor[randint(0, len(vetor))]) #
 
 
     return choose
