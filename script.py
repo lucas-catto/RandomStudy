@@ -38,11 +38,13 @@ def RandomStudy():
     FrontEnd()
 
     vetor = []
-    
-    try:
-        amount = int(input("Informe a quantidade de matérias que deseja escolher: "))
-    except ValueError or TypeError:
-        print("Informe uma quantidade válida!")
+
+    while True:    
+        try:
+            amount = int(input("Informe a quantidade de matérias que deseja escolher: "))
+            break
+        except ValueError or TypeError:
+            print("Informe uma quantidade válida!")
     
     cont = 0
     while True:
@@ -64,7 +66,9 @@ def RandomStudy():
     # Se não for, sorteia normal.
     else:
         for c in range(0, amount):
-            choose.append(vetor[randint(0, len(vetor))]) #
+            # erro aqui pra baixo:
+            rand = vetor[randint(0, len(vetor))]
+            choose.append(rand) #
 
 
     return choose
